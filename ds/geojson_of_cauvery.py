@@ -17,11 +17,11 @@ class CauveryHandler(osmium.SimpleHandler):
         if 'waterway' not in w.tags:
             return
 
-        if 'name' not in w.tags:
-            return
+        # if 'name' not in w.tags:
+        #     return
 
-        if 'Kaveri' not in w.tags['name']:
-            return
+        # if 'Kaveri' not in w.tags['name']:
+        #     return
 
         # Tags must be copied when they need to be stored.
         properties = dict(w.tags)
@@ -52,7 +52,7 @@ def main():
     fc = geojson.FeatureCollection([])
     fc.features = h.ways
 
-    with open('../data/kaveri.geojson', 'w') as f:
+    with open('../data/rivers.geojson', 'w') as f:
         json.dump(fc, f, indent=4)
 
 
