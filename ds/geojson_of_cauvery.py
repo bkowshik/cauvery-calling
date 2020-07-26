@@ -52,7 +52,7 @@ def main():
     fc = geojson.FeatureCollection([])
     fc.features = h.ways
 
-    with open('../data/kaveri.geojson', 'w') as f:
+    with open('../data/cauvery.geojson', 'w') as f:
         json.dump(fc, f, indent=4)
 
 
